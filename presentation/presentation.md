@@ -1,12 +1,12 @@
 ---
 title: "Structural Topology and Survivorship Bias in E-Sports: A Network Science Analysis"
-author: "Group 47"
+author: "Group 103"
 date: "April 2026"
 ---
 
 # Slide 1: Title
 **Title:** Structural Topology and Survivorship Bias in E-Sports: A Network Science Analysis of Professional Valorant Matches  
-**Presenters:** Group 47  
+**Presenters:** Group 103  
 **Course:** Network Science  
 **Topic:** Leveraging Complex Graphs to Measure Team Cohesion and Predict Match Outcomes  
 
