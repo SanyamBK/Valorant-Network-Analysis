@@ -32,7 +32,11 @@ date: "April 2026"
 * **Edges ($E$):** 236,225 unique "co-play" relationships.
 * **Semantic Weighting:** The edge weight between Player A and Player B increases monotonically for every official match they play together, proxying deeply entrenched team synergy.
 
-*[INSERT TABLE SUGGESTION: A small 3-row, 3-column table showing the schema of our graph (Node = Player Name, Edge = Co-Existence, Weight = Matches Played Together).]*
+| Component | Graph Mapping | Mathematical Semantic |
+| :---: | :---: | :--- |
+| **Node ($v$)** | Professional Player Name | Unique competitor entity within the network |
+| **Edge ($e$)** | Match Co-Existence | Players actively competed in the same official lobby |
+| **Weight ($w$)**| Matches Played Together | Monotonically scales as a proxy for strategic synergy |
 
 ---
 
