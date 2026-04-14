@@ -40,6 +40,12 @@ The network $G = (V, E)$ was formally constructed as a weighted, undirected grap
 \subsection{Degree Distribution}
 The empirical degree distribution $P(k)$ exhibits a pronounced heavy-tailed right skew. The vast majority of players form a dense ''amateur'' cluster with extremely low degrees (having only competed in one or two matches before elimination). Conversely, a highly connected ''anchor'' tier of veteran players maintain massive degree centralities, representing roster core pillars that act as super-connectors across international tournament hubs.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/plots/degree_distribution.png}
+    \caption{Degree distribution of players highlighting the heavy-tailed right skew.}
+\end{figure}
+
 \subsection{Discovery of Tournament Survivorship Bias}
 During the analysis of individual player win rates ($W_i$), we identified a severe statistical anomaly. When calculating the unweighted average win rate of the network, the distribution crashed to $\approx 28\%$, explicitly violating the zero-sum nature of competitive 5v5 matches (which dictates the global mean must strictly be 50\%).
 
@@ -58,6 +64,12 @@ To identify underlying functional cohorts (e.g., regional leagues like VCT EMEA 
 \end{equation}
 The algorithm successfully partitioned the 8,793 nodes into \textbf{27 distinct, active communities}. Analysis of these communities using the True Weighted Win Rate ($\hat{W}_C$) revealed that several highly-clustered sub-graphs mathematically possess micro-advantages, consistently pushing $50.5\%+$ win rates against opposing competitive spheres.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/plots/community_win_rates.png}
+    \caption{True Average Win Rate computed across the top 10 functional communities.}
+\end{figure}
+
 \section{Deliverable 4: Machine Learning Match Predictor}
 The final objective was to deduce whether a match prediction model could be built utilizing \textit{strictly} network structural data, without access to external game heuristics (e.g., agent class, mechanical skill, reaction times).
 
@@ -72,6 +84,12 @@ Using an 80/20 train-test split, we trained two discrete models:
     \item \textbf{Logistic Regression:} 65.68\% Accuracy
     \item \textbf{Random Forest Classifier:} \textbf{66.84\% Accuracy}
 \end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../results/plots/confusion_matrix.png}
+    \caption{Confusion Matrix for the predictive power of the Random Forest model driven solely by relative graph topology.}
+\end{figure}
 
 \section{Conclusion}
 The ability to predict nearly 67\% of professional match outcomes—a highly stochastic and volatile sport—using nothing but network interaction centralities is a profound success. It proves that structural interconnectedness is a direct, quantifiable proxy for team cohesion and competitive viability. This repository entirely supersedes prior trivial approaches by deeply interrogating and mathematically resolving network biases to extract genuine tournament intelligence.
